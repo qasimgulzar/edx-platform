@@ -221,7 +221,7 @@ class LibraryContentBlock(
         overlimit_block_keys = set()
         if len(selected_keys) > max_count:
             num_to_remove = len(selected_keys) - max_count
-            overlimit_block_keys = set(rand.sample(selected_keys, num_to_remove))
+            overlimit_block_keys = set(rand.sample(list(selected_keys), num_to_remove))
             selected_keys -= overlimit_block_keys
 
         # Do we have enough blocks now?
