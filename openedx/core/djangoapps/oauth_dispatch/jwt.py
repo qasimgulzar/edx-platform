@@ -283,11 +283,12 @@ def _attach_profile_claim(payload, user):
 # .. toggle_use_cases: temporary
 # .. toggle_creation_date: 2024-03-20
 # .. toggle_target_removal_date: 2024-04-20
-# .. toggle_tickets: 
+# .. toggle_tickets:
 # https://2u-internal.atlassian.net/browse/AUTH-195?atlOrigin=eyJpIjoiODMzODBiODMwMjU5NGRiZTkyOTIzYThhZjZiNWE0MzMiLCJwIjoiaiJ9
 JWT_AUTH_ADD_KID_HEADER = SettingToggle(
     'JWT_AUTH_ADD_KID_HEADER', default=False, module_name=__name__
 )
+
 
 def _encode_and_sign(payload, use_asymmetric_key, secret):
     """Encode and sign the provided payload."""
