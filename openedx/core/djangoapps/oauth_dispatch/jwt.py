@@ -289,7 +289,7 @@ def _encode_and_sign(payload, use_asymmetric_key, secret):
         algorithm = settings.JWT_AUTH['JWT_ALGORITHM']
 
     jwk = PyJWK(key, algorithm)
-    return jwt.encode(payload, jwk.key, algorithm=algorithm)
+    return jwt.encode(payload, jwk.key, algorithm=algorithm, headers={'kid': jwk.key_id})
 
 
 def _get_updated_scopes(scopes, grant_type):
