@@ -302,7 +302,7 @@ def _encode_and_sign(payload, use_asymmetric_key, secret):
         algorithm = settings.JWT_AUTH['JWT_ALGORITHM']
 
     jwk = PyJWK(key, algorithm)
-    if JWT_AUTH_ADD_KID_HEADER.is_enabled():
+    if JWT_AUTH_ADD_KID_HEADER.is_enabled() and jwk.key_id:
         return jwt.encode(payload, jwk.key, algorithm=algorithm, headers={'kid': jwk.key_id})
 
     return jwt.encode(payload, jwk.key, algorithm=algorithm)
