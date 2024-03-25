@@ -129,9 +129,6 @@ def listen_for_course_publish(sender, course_key, **kwargs):  # pylint: disable=
         update_search_index,
         update_special_exams_and_publish
     )
-    from cms.djangoapps.coursegraph.tasks import (
-        dump_course_to_neo4j
-    )
 
     # register special exams asynchronously after the data is ready
     course_key_str = str(course_key)
@@ -140,10 +137,6 @@ def listen_for_course_publish(sender, course_key, **kwargs):  # pylint: disable=
     if key_supports_outlines(course_key):
         # Push the course outline to learning_sequences asynchronously.
         update_outline_from_modulestore_task.delay(course_key_str)
-
-    if settings.COURSEGRAPH_DUMP_COURSE_ON_PUBLISH:
-        # Push the course out to CourseGraph asynchronously.
-        dump_course_to_neo4j.delay(course_key_str)
 
     # Finally, call into the course search subsystem
     # to kick off an indexing action

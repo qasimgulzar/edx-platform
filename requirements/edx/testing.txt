@@ -144,7 +144,6 @@ certifi==2023.7.22
     #   elasticsearch
     #   httpcore
     #   httpx
-    #   py2neo
     #   requests
     #   snowflake-connector-python
 cffi==1.16.0
@@ -785,7 +784,6 @@ iniconfig==2.0.0
 interchange==2021.0.4
     # via
     #   -r requirements/edx/base.txt
-    #   py2neo
 ipaddress==1.0.23
     # via -r requirements/edx/base.txt
 isodate==0.6.1
@@ -928,7 +926,6 @@ monotonic==1.6
     # via
     #   -r requirements/edx/base.txt
     #   analytics-python
-    #   py2neo
 mpmath==1.3.0
     # via
     #   -r requirements/edx/base.txt
@@ -1015,7 +1012,6 @@ packaging==23.2
     #   -r requirements/edx/base.txt
     #   drf-yasg
     #   gunicorn
-    #   py2neo
     #   pytest
     #   snowflake-connector-python
     #   tox
@@ -1024,7 +1020,6 @@ pact-python==2.0.1
 pansi==2020.7.3
     # via
     #   -r requirements/edx/base.txt
-    #   py2neo
 path==16.7.1
     # via
     #   -r requirements/edx/base.txt
@@ -1088,10 +1083,6 @@ psutil==5.9.6
     #   pytest-xdist
 py==1.11.0
     # via tox
-py2neo @ https://github.com/overhangio/py2neo/releases/download/2021.2.3/py2neo-2021.2.3.tar.gz
-    # via
-    #   -c requirements/edx/../constraints.txt
-    #   -r requirements/edx/base.txt
 pyasn1==0.5.0
     # via
     #   -r requirements/edx/base.txt
@@ -1122,7 +1113,6 @@ pygments==2.16.1
     #   -r requirements/edx/base.txt
     #   -r requirements/edx/coverage.txt
     #   diff-cover
-    #   py2neo
 pyjwkest==1.4.2
     # via
     #   -r requirements/edx/base.txt
@@ -1419,7 +1409,6 @@ six==1.16.0
     #   pact-python
     #   pansi
     #   paver
-    #   py2neo
     #   pyjwkest
     #   python-dateutil
     #   python-memcached
@@ -1567,7 +1556,6 @@ urllib3==1.26.17
     #   botocore
     #   elasticsearch
     #   pact-python
-    #   py2neo
     #   requests
     #   selenium
     #   snowflake-connector-python
